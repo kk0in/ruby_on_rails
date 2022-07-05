@@ -1,0 +1,11 @@
+<form action="/home/update/<%=@post.id%>" method="post">
+	<input type="integer" name="tutor_id" placeholder="tutor_id" value="<%=@post.tutor_id%>"/>
+	<br>
+	<input type="datetime" name="start_time" placeholder="start_time" value="<%=@post.start_time%>"/>
+	<br>
+	<input type="integer" name="active" placeholder="active" value="<%=@post.active%>"/>
+	<br>
+	<input type="boolean" name="applied" placeholder="applied" value="<%=@post.applied%>"/>
+	<br>
+	<input type="submit" value="수정" class="submit">
+</form>

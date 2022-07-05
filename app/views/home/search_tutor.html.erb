@@ -1,0 +1,6 @@
+<div class="container">
+	<% Schedule.where(start_time: params[:start_time], active: 1).each do |s| %>
+		<%=s.tutor_id%><br>
+		<hr>
+	<%end%>
+</div>

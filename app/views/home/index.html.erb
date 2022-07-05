@@ -1,0 +1,39 @@
+<div class="container">
+	<% @post.each do |post| %>
+		<div class="post">
+			튜터 ID: <%=post.tutor_id%><br>
+			수업 시작 시각: <%=post.start_time%><br>
+			<div class="edit">
+			<a href="/home/update_form/<%=post.id%>">
+				수정
+			</a>
+			<a href="/home/delete/<%=post.id%>">
+				삭제
+			</a>
+			<br>
+			<a href="/home/search_reservation/<%=post.tutor_id%>">
+				해당 튜터의 예약된 수업 목록 조회
+			</a>
+			</div>
+		</div>
+	<%end%>
+	<a href="/home/create_form">튜터 - 등록</a>
+	<br>
+	<a href="/home/search_time_form">유저 - 20분/40분 수업 검색</a>
+	<br>
+	<a href="/home/search_tutor_form">유저 - 원하는 시간에 수업 가능한 튜터 검색</a>
+	<br>
+	<a href="/home/apply_form">유저 - 수강 신청 </a>
+</div>
+
+<style>
+	.post, .reply{
+		border: 1px solid;
+		margin: 30px auto;
+		max-width: 1000px;
+		border-radius: 5px;
+		padding: 50px;
+	}
+	.edit{float:left;}
+	.edit_reply{float:right}
+</style>
